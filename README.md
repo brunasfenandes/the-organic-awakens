@@ -161,18 +161,18 @@ Response:
 
 - Develop user interface
 
-  - Create pages for game instructions, questions, and score display
+  - Create pages for instructions, questions, and score display
 
-- Feature: Game mechanics
+- Feature: Mechanics
 
-  - Implement game logic to test users' knowledge of organic chemistry concepts
+  - Implement logic to test users' knowledge of organic chemistry concepts
   - Store user progress in sessionStorage
 
 - Feature: Scoring system
   - Implement a scoring system to track user performance
 - Feature: User feedback
 
-  - Create a feedback form for users to submit their thoughts on the game
+  - Create a feedback form for users to submit their thoughts on the tool
 
 - Feature: Flashcard endpoints
 
