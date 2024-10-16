@@ -59,12 +59,29 @@ Many students find organic chemistry concepts challenging, leading to a lack of 
 - Home Page: Introduction and navigation to game modes.
 - Quiz Mode: Multiple-choice questions.
 - Flashcard Mode: Interactive flashcards for studying.
-- Progress Page: User scores and progress tracking.
-- Molecule Builder: Interactive tool for building and visualizing molecules.
+- Molecule Visualizer: Interactive tool for visualizing molecules.
 
 ### Mockups
 
-Provide visuals of your app's screens. You can use pictures of hand-drawn sketches, or wireframing tools like Figma.
+#### Home Page
+
+![](HomePage.png)
+
+#### About Page
+
+![](About.png)
+
+#### Flashcards Page
+
+![](Flashcards.png)
+
+#### Quiz Page
+
+![](Quiz-Question.png)
+
+#### React-MolViewer Page
+
+![](React-MolViewer.png)
 
 ### Data
 
@@ -107,47 +124,15 @@ Response:
 ]
 ```
 
-**POST /users/register**
-
-- Add a user account
-
-Parameters:
-
-- email: User's email
-- password: User's provided password
-
-Response:
-
-```
-{
-    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
-}
-```
-
-**POST /users/login**
-
-- Registers a new user.
-
-Parameters:
-
-- email: User's email
-- password: User's password
-
-Response:
-
-```
-{
-  "message": "User registered successfully."
-}
-```
-
 ## Roadmap
 
 - Create client
-  Set up a React project with routes and basic pages
+
+  - Set up a React project with routes and basic pages
 
 - Create server
-  Set up an Express server with routing and placeholder 200 responses
+
+  - Set up an Express server with routing and placeholder 200 responses
 
 - Create migrations
 
@@ -163,13 +148,10 @@ Response:
 
   - Create pages for instructions, questions, and score display
 
-- Feature: Mechanics
-
-  - Implement logic to test users' knowledge of organic chemistry concepts
-  - Store user progress in sessionStorage
-
 - Feature: Scoring system
+
   - Implement a scoring system to track user performance
+
 - Feature: User feedback
 
   - Create a feedback form for users to submit their thoughts on the tool
@@ -200,22 +182,8 @@ Response:
 
 - Challenge Mode: Timed quiz interface.
 
+- Implement user registrations/login
+
 - Implement progress tracking for quiz results.
-  **GET /progress/**
-
-  - Retrieves the progress of a user.
-
-  Parameters:
-
-  - userId: Unique identifier for the user.
-
-  Response:
-
-  ```
-  {
-    "userId": 1,
-    "scores": [85, 90, 78]
-  }
-  ```
 
 - Simple interactive molecule builder.
