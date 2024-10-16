@@ -65,7 +65,7 @@ Many students find organic chemistry concepts challenging, leading to a lack of 
 
 #### Home Page
 
-![](HomePage.png)
+![](Home.png)
 
 #### About Page
 
