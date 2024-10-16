@@ -1,0 +1,28 @@
+@use '../../styles/partials/variables' as *;
+
+.header {
+  background-color: #1F7A8C;
+  height: 100px;
+  display: flex;
+  padding: 0 1rem;
+
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &--right {
+      display: flex;
+      width: 120px;
+      align-items: center;
+      color: $White;
+    }
+
+    &--left {
+      display: flex;
+      align-items: center;
+      color: $White;
+    }
+  }
+}
