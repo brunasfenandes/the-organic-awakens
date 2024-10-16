@@ -1,0 +1,27 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.not-found {
+  &__title {
+    margin: 1rem;
+    text-align: center;
+  
+    @include tablet {
+      margin: 2.25rem;
+    }
+  
+    @include desktop {
+      margin: 3.9375rem;
+    }
+  }
+
+  &__text {
+    margin: 1rem;
+    text-align: center;
+  
+    @include tablet {
+      margin: 0 2.25rem;
+    }
+  }
+}

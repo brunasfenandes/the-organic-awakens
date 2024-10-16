@@ -1,0 +1,20 @@
+@use './variables' as *;
+@use './typography' as *;
+@use './mixins' as *;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+  box-sizing: border-box;
+  min-width: 20rem;
+}
+ 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
