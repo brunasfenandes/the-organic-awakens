@@ -1,10 +1,11 @@
 @use '../../styles/partials/variables' as *;
 
 .header {
-  background-color: #1F7A8C;
+  background-color: $Header-Blue;
   height: 100px;
   display: flex;
   padding: 0 1rem;
+  color: $White;
 
   &__nav{
     display: flex;

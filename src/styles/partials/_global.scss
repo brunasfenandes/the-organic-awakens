@@ -19,17 +19,22 @@ a {
   text-decoration: none;
 }
 
+main {
+  background-color: $BG-Blue;
+  margin: 0 1rem;
+}
+
 .button { 
   padding: 0;
   object-position: center;
   background-color: transparent;
   border: none;
-  color: $White;
 
   &--menu {
     width: 2.5rem;
     height: 2.5rem;
-    transition: all .2s ease-in-out;
+    transition: all .17s ease-in-out;
+    color: $White;
 
     &.rotate {
       transform: rotate(90deg);

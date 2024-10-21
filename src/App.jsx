@@ -14,14 +14,15 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/flashcards" element={<FlashcardPage/>} /> 
-          <Route path="/quiz" element={<QuizPage />} />
-          <Route path="/3dmol" element={<MolViewerPage/>} />
-          <Route path='*' element={<NotFound/>} />
-        </Routes>
-        <BGMol/>
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/flashcards" element={<FlashcardPage/>} /> 
+            <Route path="/quiz" element={<QuizPage />} />
+            <Route path="/3dmol" element={<MolViewerPage/>} />
+            <Route path='*' element={<NotFound/>} />
+          </Routes>
+        </main>
       </BrowserRouter>
     </>
   )
