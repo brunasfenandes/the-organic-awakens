@@ -1,9 +1,28 @@
-import React, { Suspense } from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { Suspense, useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { ContactShadows, OrbitControls } from '@react-three/drei';
 import Benzen from '../../../public/Benzen.jsx';
 import * as THREE from 'three';
 import './BGMol.scss';
+
+
+function RotatingModel() {
+  const group = useRef();
+
+  const rotationAxis = new THREE.Vector3(0, 0, 0); 
+
+  useFrame(() => {
+    if (group.current) {
+      group.current.rotateOnAxis(rotationAxis, 0.005); 
+    }
+  });
+
+  return (
+    <group ref={group}>
+      <Benzen />
+    </group>
+  );
+}
 
 export default function BGMol() {
   return (
@@ -18,10 +37,10 @@ export default function BGMol() {
           castShadow 
         />
 
-        <OrbitControls enableZoom={true} enablePan={true} enableRotate={true} />
+        <OrbitControls enableZoom={false} enablePan={false} enableRotate={false} />
 
-        <Suspense>
-          <Benzen />
+        <Suspense fallback={null}>
+          <RotatingModel/>
         </Suspense>
         
         <ContactShadows 
