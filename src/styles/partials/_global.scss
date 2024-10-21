@@ -31,7 +31,7 @@ a {
     height: 2.5rem;
     transition: all .2s ease-in-out;
 
-    &:focus {
+    &.rotate {
       transform: rotate(90deg);
     }
   }

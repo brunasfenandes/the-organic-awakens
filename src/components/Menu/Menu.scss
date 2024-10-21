@@ -1,0 +1,35 @@
+@use '../../styles/partials/variables' as *;
+
+.menu {
+  position: absolute;
+  top: 6.25rem;
+  right: 0rem;
+  color: black;
+  padding: 2rem 0;
+  border-radius: 0 0 0 .3125rem;
+  background-color: rgb(186, 248, 227);
+  width: 9.375rem;
+  // border: .0625rem solid gray;
+
+  &__list {
+    list-style-type: none;
+    padding: 0 0.5rem;
+    
+    &--item {
+      padding: 0.5rem 0;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.6rem;
+    right: 1.7rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    transform: rotate(45deg);
+    background-color: rgba(186, 248, 227);
+    // border-left: .0625rem solid gray;
+    // border-top: .0625rem solid gray;
+  }
+}
