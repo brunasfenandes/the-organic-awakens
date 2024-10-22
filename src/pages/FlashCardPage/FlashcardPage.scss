@@ -15,6 +15,10 @@
     border-radius: 1rem;
     background-color: $Dark;
     align-content: center;
+
+    @include tablet {
+      height: 400px;
+    }
   }
 
   &__container{
@@ -22,6 +26,15 @@
     height: 265px;
     margin: 1rem;
     border-radius: 1rem;
+
+    @include tablet {
+      height: 350px;
+    }
+  }
+
+  @include tablet {
+    padding: 0 2.25rem;
+    height: 800px;
   }
 }
 

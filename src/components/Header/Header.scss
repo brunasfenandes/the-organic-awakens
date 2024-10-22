@@ -1,4 +1,5 @@
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 .header {
   background-color: $Header-Blue;
@@ -29,5 +30,13 @@
       align-items: center;
       color: $White;
     }
+
+    // @include tablet {
+    //   margin: 0 2.25rem;
+    // }
+  }
+
+  @include tablet {
+    padding: 0 2.25rem;
   }
 }

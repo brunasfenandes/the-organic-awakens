@@ -22,6 +22,10 @@ a {
 main {
   background-color: $BG-Blue;
   margin: 0 1rem;
+
+  @include tablet {
+    margin: 0 2.25rem;
+  }
 }
 
 .button { 
