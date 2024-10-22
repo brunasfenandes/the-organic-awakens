@@ -42,4 +42,9 @@
     height: 150px;
     padding: 1rem 2.25rem;
   }
+
+  @include desktop {
+    height: 150px;
+    padding: 1rem 2.25rem;
+  }
 }
