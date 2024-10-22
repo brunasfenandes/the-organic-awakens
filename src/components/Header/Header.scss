@@ -18,11 +18,12 @@
       display: flex;
       width: 120px;
       align-items: center;
-      color: $White;
+    }
 
-      h4{
-        font-weight: 400;
-      }
+    &--title{
+      color: $White;
+      font-weight: 400;
+      font-size: 22px;
     }
 
     &--left {
@@ -31,12 +32,14 @@
       color: $White;
     }
 
-    // @include tablet {
-    //   margin: 0 2.25rem;
-    // }
+    @include desktop {
+      margin: 0 auto;
+      max-width: 63.75rem;
+    }
   }
 
   @include tablet {
-    padding: 0 2.25rem;
+    height: 150px;
+    padding: 1rem 2.25rem;
   }
 }

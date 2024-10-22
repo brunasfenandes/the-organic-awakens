@@ -33,16 +33,16 @@ export default function FlashcardPage() {
         </article>
 
         <Carousel responsive={responsive}>
-          <div className="card">Item 1</div>
-          <div className="card">Item 2</div>
-          <div className="card">Item 3</div>
-          <div className="card">Item 4</div>
-          <div className="card">Item 5</div>
-          <div className="card">Item 6</div>
-          <div className="card">Item 7</div>
-          <div className="card">Item 8</div>
-          <div className="card">Item 9</div>
-          <div className="card">Item 10</div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
+          <div className="card"></div>
         </Carousel>
       </div>
     </>

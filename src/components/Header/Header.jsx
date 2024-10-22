@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Menu from '../Menu/Menu';
 import './Header.scss';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -16,7 +17,9 @@ export default function Header() {
       <div className='header'>
         <nav className='header__nav'>
           <div className='header__nav--right'>
-            <h4>THE ORGANIC AWAKENS</h4>
+            <NavLink to="/">
+              <h4 className='header__nav--title'>THE ORGANIC AWAKENS</h4>
+            </NavLink>
           </div>
 
           <div className='header__nav--left'>
