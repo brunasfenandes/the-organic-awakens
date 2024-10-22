@@ -1,0 +1,42 @@
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  &__question {
+    height: 300px;
+    background-color: $grey-ish;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__option {
+    height: 40px;
+    // background-color: $AAACEx;
+    margin: 1.5rem 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+
+    &--correct {
+      background-color: green;
+      color: $White;
+      opacity: 70%;
+    }
+
+    &--wrong {
+      background-color: red;
+      color: $White;
+      opacity: 70%;
+    }
+  }
+}
