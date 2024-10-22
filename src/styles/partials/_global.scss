@@ -35,13 +35,15 @@ main {
   border: none;
 
   &--menu {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     transition: all .17s ease-in-out;
-    color: $White;
+    padding: 0.26rem;
+    border-radius: 5px;
 
     &.rotate {
       transform: rotate(90deg);
+      background-color: rgba(2, 43, 58, 0.5);
     }
   }
 }
