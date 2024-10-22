@@ -1,4 +1,5 @@
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 
 .menu {
   position: absolute;
@@ -7,7 +8,7 @@
   color: black;
   padding: 2rem 0;
   border-radius: 0.3125rem;
-  background-color: rgba(191, 219, 247, 0.2);
+  background-color: rgba(191, 219, 247, 0.85);
   width: 9.375rem;
   transition: all .04s ease-in-out;
   text-align: center;
@@ -23,19 +24,17 @@
     &--item {
       padding: 0.5rem 0;
       color: $Menu-Color;
+      font-size: 22px;
+    }
+
+    @include tablet {
+      gap: 40px;
     }
   }
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: -0.6rem;
-  //   right: 1.7rem;
-  //   width: 1.25rem;
-  //   height: 1.25rem;
-  //   transform: rotate(45deg);
-  //   background-color: rgba(191, 219, 247, 0.5);
-  //   // border-left: .0625rem solid gray;
-  //   // border-top: .0625rem solid gray;
-  // }
+  @include tablet {
+    width: 16rem;
+    height: 25rem;
+    top: 9.3rem;
+  }
 }

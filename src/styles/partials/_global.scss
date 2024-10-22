@@ -26,6 +26,11 @@ main {
   @include tablet {
     margin: 0 2.25rem;
   }
+
+  @include desktop {
+    margin: 0 auto;
+    max-width: 63.75rem;
+  }
 }
 
 .button { 
@@ -35,13 +40,26 @@ main {
   border: none;
 
   &--menu {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     transition: all .17s ease-in-out;
     color: $White;
+    border-radius: .3125rem;
+    padding: 0.25rem;
 
     &.rotate {
       transform: rotate(90deg);
+      background-color:  rgba(2, 43, 58, 0.5);
+    }
+
+    @include tablet {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    @include desktop {
+      width: 4rem;
+      height: 4rem;
     }
   }
 }
@@ -50,5 +68,15 @@ main {
   &--menu {
     width: 2.5rem;
     height: 2.5rem;
+
+    @include tablet {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    @include desktop {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
   }
 }
