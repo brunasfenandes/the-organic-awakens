@@ -1,0 +1,22 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.sidebar {
+  padding: 1rem 0;
+
+  @include desktop {
+    padding: 2.25rem 0;
+    margin-left: 1.5rem;
+  }
+
+  &__title {
+    color: $Dark;
+    font-size: .75rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+
+    @include desktop {
+      padding-bottom: 1.5rem;
+    }
+  }
+}

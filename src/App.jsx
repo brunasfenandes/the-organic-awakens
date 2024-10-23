@@ -7,6 +7,8 @@ import FlashcardPage from './pages/FlashCardPage/FlashcardPage';
 import QuizPage from './pages/QuizPage/QuizPage';
 import MolViewerPage from './pages/MolViewerPage/MolViewerPage';
 import HomePage from './pages/HomePage/HomePage';
+import Footer from './components/Footer/Footer';
+import AboutPage from './pages/AboutPage/AboutPage';
 
 function App() {
 
@@ -17,12 +19,14 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/flashcards" element={<FlashcardPage/>} /> 
             <Route path="/quiz" element={<QuizPage />} />
             <Route path="/3dmol" element={<MolViewerPage/>} />
             <Route path='*' element={<NotFound/>} />
           </Routes>
         </main>
+        <Footer />
       </BrowserRouter>
     </>
   )

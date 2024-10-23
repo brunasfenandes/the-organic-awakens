@@ -7,10 +7,11 @@
   border-radius: 0.3125rem;
   align-self: end;
   background-color: $Header-Blue;
-  width: 9.375rem;
+  width: 100%;
   transition: all .04s ease-in-out;
   text-align: center;
   display: flex;
+  justify-content: center;
 
   &__list {
     list-style-type: none;

@@ -17,11 +17,15 @@ html {
 
 a {
   text-decoration: none;
+  color: $White;
 }
 
 main {
   background-color: $BG-Blue;
   margin: 0 1rem;
+  padding: 0 1rem;
+  overflow: hidden;
+  position: relative;
 
   @include tablet {
     margin: 0 2.25rem;
@@ -30,6 +34,7 @@ main {
   @include desktop {
     margin: 0 auto;
     max-width: 63.75rem;
+
   }
 }
 

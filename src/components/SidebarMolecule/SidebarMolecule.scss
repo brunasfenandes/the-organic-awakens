@@ -1,0 +1,35 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.sidebar {
+  
+  &__molecule{
+    display: flex;
+    padding-bottom: 1rem;
+
+    @include desktop {
+      padding-bottom: 1.5rem;
+    }
+  }
+  
+  &__image {
+    background-color: $grey-ish;
+    border-radius: .25rem;
+    height: 60px;
+    width: 100px;
+    margin-right: 1rem;
+  }
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.1rem 0;
+  }
+  
+  &__mol-name {
+    font-size: .8125rem;
+    font-weight: 600;
+    color: $Dark;
+  }
+}

@@ -3,11 +3,26 @@
 @use '../../styles/partials/mixins' as *;
 
 .main {
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem;
-  height: 700px;
-  justify-content: space-around;
+  
+  &--fl {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    height: 700px;
+    justify-content: space-around;
+
+    @include tablet {
+      padding: 0 2.25rem;
+      height: 800px;
+    }
+  
+    @include desktop {
+      margin: 0 auto;
+      max-width: 63.75rem;
+      padding: 0 3.9375rem;
+      height: 1000px;
+    }
+  }
 
   &__flashcard {
     height: 400px;
@@ -40,18 +55,6 @@
       height: 400px;
       margin: 0;
     }
-  }
-
-  @include tablet {
-    padding: 0 2.25rem;
-    height: 800px;
-  }
-
-  @include desktop {
-    margin: 0 auto;
-    max-width: 63.75rem;
-    padding: 0 3.9375rem;
-    height: 1000px;
   }
 }
 

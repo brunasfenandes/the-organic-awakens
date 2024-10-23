@@ -1,0 +1,19 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.about {
+  // height: 43.75rem;
+  // width: 31.25rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem;
+  padding: 5rem;
+  background-color: rgba(225, 229, 242, 0.5);
+  border-radius: 1.25rem;
+  height: 900px;
+}

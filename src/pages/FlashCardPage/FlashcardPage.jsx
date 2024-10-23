@@ -68,7 +68,7 @@ export default function FlashcardPage() {
   return (
     <>
       {/* <BGMol /> */}
-      <div className="main">
+      <div className="main main--fl">
         <article className="main__flashcard">
           <div className="main__container">
             {selectedFlashcard ? (

@@ -1,6 +1,9 @@
-canvas {
-  margin: 5rem 0;
-  height: 500px !important;
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  // background-color: aquamarine;
+  height: 100%;
+  z-index: 0; /* Ensure it stays in the background */
+  overflow: hidden;
 }
