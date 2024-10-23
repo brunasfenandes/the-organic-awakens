@@ -58,7 +58,7 @@ export default function Header() {
 
           <div className='header__menu'>
             <ul className='menu__list'>
-              <Link to="/" className='menu__list--item'>
+              <Link to="/about" className='menu__list--item'>
                 About
               </Link>
               <Link to="/flashcards" className='menu__list--item'>
