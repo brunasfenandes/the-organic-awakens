@@ -56,11 +56,13 @@ main {
     @include tablet {
       width: 4rem;
       height: 4rem;
+      display: none;
     }
 
     @include desktop {
       width: 4rem;
       height: 4rem;
+      display: none;
     }
   }
 }

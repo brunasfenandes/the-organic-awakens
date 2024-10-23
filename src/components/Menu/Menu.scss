@@ -2,17 +2,15 @@
 @use '../../styles/partials/mixins' as *;
 
 .menu {
-  position: absolute;
-  top: 7.5rem;
   right: 0rem;
-  color: black;
   padding: 2rem 0;
   border-radius: 0.3125rem;
-  background-color: rgba(191, 219, 247, 0.85);
+  align-self: end;
+  background-color: $Header-Blue;
   width: 9.375rem;
   transition: all .04s ease-in-out;
   text-align: center;
-  z-index: 2;
+  display: flex;
 
   &__list {
     list-style-type: none;
@@ -22,28 +20,43 @@
     
     &--item {
       padding: 0.5rem 0;
-      color: $Menu-Color;
+      color: $White;
       font-size: 22px;
+
+      @include tablet {
+        padding: 0 1rem;
+      }
+
+      @include desktop {
+        padding: 0 1.5rem;
+      }
     }
 
     @include tablet {
-      gap: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
     }
 
     @include desktop {
-      gap: 40px;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 
   @include tablet {
-    width: 16rem;
-    height: 25rem;
-    top: 9.4rem;
+    width: 27rem;
+    height: 100px;
+    padding: 0;
+    align-self: center;
+    align-items: center;
   }
 
   @include desktop {
-    width: 20rem;
-    height: 25rem;
-    top: 9.4rem;
+    width: 35rem;
+    height: 100px;
+    padding: 0;
+    align-self: center;
+    align-items: center;
   }
 }

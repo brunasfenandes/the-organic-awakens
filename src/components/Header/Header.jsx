@@ -1,11 +1,33 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Menu from '../Menu/Menu';
 import './Header.scss';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
   const [rotateMenu, setRotateMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    const isNowMobile = window.innerWidth <= 768; 
+    setIsMobile(isNowMobile);
+
+    if (!isNowMobile) {
+      setOpenMenu(false);
+      setRotateMenu(false);
+    }
+  };
+
+  // Check on mount and resize
+  useEffect(() => {
+    handleResize(); // Check on initial render
+    window.addEventListener('resize', handleResize); // Listen for window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup on unmount
+    };
+  }, []);
+
 
   const handleMenuClick = () => {
     setOpenMenu((prev) => !prev);
@@ -14,7 +36,7 @@ export default function Header() {
 
   return (
     <>
-      <div className='header'>
+      <div className={`header ${openMenu ? 'header--open' : 'header--closed'}`}>
         <nav className='header__nav'>
           <div className='header__nav--right'>
             <NavLink to="/">
@@ -32,12 +54,27 @@ export default function Header() {
                 src="/src/assets/icons/menu.svg"
               />
             </button>
-            
-            {
-              openMenu && <Menu />
-            }
+          </div>
+
+          <div className='header__menu'>
+            <ul className='menu__list'>
+              <Link to="/" className='menu__list--item'>
+                About
+              </Link>
+              <Link to="/flashcards" className='menu__list--item'>
+                Flashcards
+              </Link>
+              <Link to="/quiz" className='menu__list--item'>
+                Quiz
+              </Link>
+              <Link to="/3dmol" className='menu__list--item'>
+                3D Mol Visualizer
+              </Link>
+            </ul>
           </div>
         </nav>
+
+        {isMobile && openMenu && <Menu />}
       </div>
     </>
   );

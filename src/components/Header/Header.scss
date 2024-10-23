@@ -3,48 +3,85 @@
 
 .header {
   background-color: $Header-Blue;
-  height: 120px;
-  display: flex;
-  padding: 0 1rem;
+  padding: 1rem;
   color: $White;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 120px;
+  transition: max-height 0.4s ease-in-out;
 
-  &__nav{
+  &--open {
+    max-height: 500px; 
+  }
+
+
+  &--closed {
+    max-height: 120px;
+  }
+
+  &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    // padding: 1rem 0;
 
-    &--right {
+    &--right, &--left {
       display: flex;
-      width: 120px;
       align-items: center;
     }
 
-    &--title{
+    &--title {
       color: $White;
       font-weight: 400;
       font-size: 22px;
+      width: 190px;
+
+      @include tablet {
+        width: 190px;
+      }
+  
+      @include desktop {
+        width: 190px;
+      }
     }
 
-    &--left {
-      display: flex;
-      align-items: center;
-      color: $White;
+    @include tablet {
+      max-width: 63.75rem;
+      margin: 0 auto;
     }
 
     @include desktop {
-      margin: 0 auto;
       max-width: 63.75rem;
+      margin: 0 auto;
     }
   }
 
   @include tablet {
-    height: 150px;
     padding: 1rem 2.25rem;
+    flex-direction: row;
+    height: 130px;
+    justify-content: space-between;
   }
 
   @include desktop {
-    height: 150px;
     padding: 1rem 2.25rem;
+    flex-direction: row;
+    height: 130px;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: none;
+
+    @include tablet{
+      display: flex;
+    }
+
+    @include desktop{
+      display: flex;
+    }
   }
 }
+
