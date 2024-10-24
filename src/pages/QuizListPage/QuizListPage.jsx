@@ -1,26 +1,70 @@
 import './QuizListPage.scss';
 import BGMol from '../../components/BGMol/BGMol';
+import { useEffect, useState } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import arrowback from '../../assets/icons/arrow-back.svg'
+
+const port = import.meta.env.VITE_PORT;
+const backendURL = import.meta.env.VITE_BACKEND_URL;
 
 export default function QuizListPage() {
+  const [quizzes, setQuizzes] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const handleGoBack = () => {
+    navigate(-1);
+  };
+
+  const getQuizzes = async () => {
+    try {
+      const { data } = await axios.get(`${backendURL}:${port}/quiz`);
+      setQuizzes(data);
+    } catch (error) {
+      setError('Failed to get quizzes');
+      console.error('Error getting quizzes:', error)
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getQuizzes();
+  }, []);
+
+  if (loading) return <p>Loading quizzes...</p>;
+  if (error) return <p>{error}</p>;
+
   return (
     <>
       <BGMol/>
 
       <div className='content'>
-        <h2 className='content__title'>Quiz List</h2>
-
+        <div className='content__header'>
+          <button className="button button--back">
+            <img 
+              src={arrowback}
+              className="icon icon--back"
+              alt="Arrow Back Icon"
+              onClick={handleGoBack}
+            />
+          </button>
+          <h2 className='content__header--title'>Quiz List</h2>
+        </div>
+        
         <div className='content__container'>
           <ul className='content__list'>
-            <li className='content__list--item'>Quiz 1</li>
-            <li className='content__list--item'>Quiz 2</li>
-            <li className='content__list--item'>Quiz 3</li>
-            <li className='content__list--item'>Quiz 4</li>
-            <li className='content__list--item'>Quiz 5</li>
-            <li className='content__list--item'>Quiz 6</li>
-            <li className='content__list--item'>Quiz 7</li>
-            <li className='content__list--item'>Quiz 8</li>
-            <li className='content__list--item'>Quiz 9</li>
-            <li className='content__list--item'>Quiz 10</li>
+            {quizzes.map((quiz) => (
+              <li 
+                key={quiz.id} 
+                className='content__list--item'>
+                <Link to={`/quiz/${quiz.id}`}>
+                  {quiz.topic}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

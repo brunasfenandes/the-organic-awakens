@@ -28,6 +28,17 @@
 
     &--item {
       margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      width: 250px;
+      border-radius: 20px;
+
+      &:hover {
+        background-color: rgba(31, 122, 140, 0.3);
+        transform: translateY(-3px) translateX(3px);
+        box-shadow: 0px 4px 10px rgba(31, 122, 140, 0.3);
+        color: $White;
+        transition: all 0.1s ease-in-out;
+      }
     }
   }
 }

@@ -57,7 +57,9 @@ export default function FlashcardsListPage() {
                 key={topic.id} 
                 className='content__list--item' 
                 id='list'> 
-                <Link to={`/flashcards/${topic.id}?topic=${encodeURIComponent(topic.topic)}`} key={topic.id}>
+                <Link 
+                  to={`/flashcards/${topic.id}?topic=${encodeURIComponent(topic.topic)}`} 
+                  key={topic.id}>
                   {topic.topic}
                 </Link>
               </li>
