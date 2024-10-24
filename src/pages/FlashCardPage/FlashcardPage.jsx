@@ -45,6 +45,7 @@ export default function FlashcardPage() {
     try {
       const { data } = await axios.get(`${backendURL}:${port}/flashcards/${id}`);
       setFlashcards(data);
+      console.log(data.image)
   
       setSelectedFlashcard(null);
     } catch (error) {
@@ -86,6 +87,10 @@ export default function FlashcardPage() {
               <div className="main__content">
                 <h2>{selectedFlashcard.topic}</h2>
                 <p>{selectedFlashcard.content}</p>
+                <img
+                  src={selectedFlashcard.image}
+                  alt="Flashcard Image"
+                />
               </div>
             ) : (
               <p>Select a flashcard to see its content.</p>
@@ -105,6 +110,7 @@ export default function FlashcardPage() {
               }}
             >
               <p>{card.content.length > 30 ? `${card.content.substring(0, 30)}...` : card.content}</p>
+              {/* {card.image && <img src={card.image} alt="Flashcard illustration" />} */}
             </div>
           ))}
         </Carousel>
