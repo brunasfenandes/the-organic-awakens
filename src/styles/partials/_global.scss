@@ -23,7 +23,6 @@ a {
 main {
   background-color: $BG-Blue;
   margin: 0 1rem;
-  padding: 0 1rem;
   overflow: hidden;
   position: relative;
 
@@ -70,6 +69,10 @@ main {
       display: none;
     }
   }
+
+  &--back {
+    width: 1.5rem;
+  }
 }
 
 .icon {
@@ -86,5 +89,9 @@ main {
       width: 3.5rem;
       height: 3.5rem;
     }
+  }
+
+  &--back {
+    width: 1.5rem;
   }
 }

@@ -24,7 +24,9 @@
 
   &__list {
     list-style-type: none;
-    padding: 0 1rem;
+    padding: 1rem;
+    background-color: rgba(16, 143, 171, 0.5);
+    border-radius: .3125rem;
 
     &--item {
       margin-bottom: 1rem;

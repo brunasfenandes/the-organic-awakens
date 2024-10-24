@@ -14,7 +14,7 @@
   }
 
   @include desktop {
-    padding: 3.9375rem 0;
+    padding: 3.9375rem 3.9375rem 1.5rem ;
     margin: 0 auto;
   }
 
@@ -32,10 +32,14 @@
       max-width: 63.75rem;
       margin: 0 auto;     
       position: relative;
+      justify-content: center;
+      gap: 40px;
     }
   }
 
   &__social {
+    display: flex;
+    flex-direction: column;
 
     &--title {
       font-size: 2rem;
@@ -59,7 +63,7 @@
 
     @include tablet {
       align-items: flex-start;
-      flex-direction: row;
+      // flex-direction: row;
     }
 
     @include desktop {
@@ -142,6 +146,7 @@
   
       @include desktop {
         width: 11.875rem;
+        padding: 0;
       }
     }
 
@@ -157,7 +162,7 @@
       // position: absolute;
       // top: 20px;
       // right: 0;
-      padding-top: 1.5rem;
+      padding-top: 0;
       padding-bottom: 1rem;
     }
   }
