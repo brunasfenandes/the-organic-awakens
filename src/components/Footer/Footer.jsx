@@ -1,33 +1,30 @@
 import { NavLink, Link } from 'react-router-dom';
 import './Footer.scss';
+import facebook from '../../assets/icons/Icon-facebook.svg';
+import instagram from '../../assets/icons/Icon-instagram.svg';
+import twitter from '../../assets/icons/Icon-twitter.svg';
+import github from '../../assets/icons/github-mark-white.svg';
 
 export default function Footer() {
   return (
     <>
-      {/* <div className='footer'>
-        <div className='footer__container'>
-          <div className='footer__right'>
-            <NavLink to="/">
-              <h4 className='footer__right--title'>THE ORGANIC AWAKENS</h4>
-            </NavLink>
-          </div>
-        </div>
-      </div> */}
-
       <footer className="footer">
         <div className="footer__container">
           <div className="footer__social">
             <p className="footer__social--title">Get in Touch</p>
 
             <div className="footer__social--icons">
-              <a href="https://www.instagram.com/" target="_blank">
-                <img src="/src/assets/icons/Icon-instagram.svg" alt="Instagram Icon" className="footer__icon"/>
+              <a href="https://github.com/brunasfenandes/" target="_blank">
+                <img src={github} alt="GitHub Icon" className="footer__icon"/>
               </a>
-              <a href="https://www.facebook.com/" target="_blank">
-                <img src="/src/assets/icons/Icon-facebook.svg" alt="Facebook Icon" className="footer__icon"/>
-              </a> 
-              <a href="https://www.twitter.com/" target="_blank">
-                <img src="/src/assets/icons/Icon-twitter.svg" alt="Twitter Icon" className="footer__icon"/>
+              <a href="https://www.instagram.com/brunafenandes" target="_blank">
+                <img src={instagram} alt="Instagram Icon" className="footer__icon"/>
+              </a>
+              {/* <a href="https://www.facebook.com/" target="_blank">
+                <img src={facebook} alt="Facebook Icon" className="footer__icon"/>
+              </a>  */}
+              <a href="https://x.com/brunasfenandes" target="_blank">
+                <img src={twitter} alt="Twitter Icon" className="footer__icon" />
               </a>
             </div>
           </div>
@@ -36,14 +33,14 @@ export default function Footer() {
             <div className="footer__management">
               <p className="footer__management-title">Developed by:</p>
               <p className="footer__agency-address">Bruna Silva Fernandes</p>
-              <a href='https://github.com/brunasfenandes/' className="footer__management-address" target="_blank">github.com/brunasfenandes</a>
+              {/* <a href='https://github.com/brunasfenandes/' className="footer__management-address" target="_blank">github.com/brunasfenandes</a> */}
               <a href="mailto:bruna.fenandes@outlook.com" target="_blank">bruna.fenandes@outlook.com</a>
             </div>
     
             <div className="footer__management">
-              <p className="footer__management-title">Developed by:</p>
+              <p className="footer__management-title">React-Molviewer by:</p>
               <p className="footer__agency-address">Bruna Silva Fernandes</p>
-              <a href='https://github.com/brunasfenandes/' className="footer__management-address" target="_blank">github.com/brunasfenandes</a>
+              {/* <a href='https://github.com/brunasfenandes/' className="footer__management-address" target="_blank">github.com/brunasfenandes</a> */}
               <a href="mailto:bruna.fenandes@outlook.com" target="_blank">bruna.fenandes@outlook.com</a>
             </div>
           </div>

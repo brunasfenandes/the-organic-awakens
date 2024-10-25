@@ -54,7 +54,8 @@
 
   &__icon {
     margin-right: 1.8rem;
-    // width: 1.25rem;
+    width: 1.5625rem;
+    height: 1.5625rem;
   }
 
   &__contact {
@@ -63,7 +64,6 @@
 
     @include tablet {
       align-items: flex-start;
-      // flex-direction: row;
     }
 
     @include desktop {

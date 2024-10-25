@@ -12,24 +12,38 @@
   }
 
   &__placeholder {
-    background-color: $Menu-Color;
-    height: 18.75rem;
-    margin: 1.5rem 0;
+    // background-color: $Menu-Color;
+    // height: 18.75rem;
+    margin: 1.5rem 1rem;
     border-radius: .625rem;
     color: $White;
-    padding: 1rem;
+    // padding: 1rem;
     align-content: end;
     font-size: .625rem;
 
     @include tablet {
-      margin: 2.25rem 1.5rem;
+      margin: 2.25rem;
+    }
+
+    @include desktop {
+      width: 1020px;
+      margin: 2.5rem;
+      height: 25rem;
+    }
+  }
+
+  &__display {
+    width: 100%;
+    border-radius: .625rem;
+
+    @include tablet {
       height: 25rem;
     }
 
     @include desktop {
-      width: 37.5rem;
+      width: 700px;
+      // margin: 2.5rem;
       height: 25rem;
-      margin: 2.5rem;
     }
   }
 }
