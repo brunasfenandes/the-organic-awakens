@@ -12,8 +12,8 @@ export default function MolInfo({ molecule }) {
       <p className='mol-info__info'>
         Molar Mass: {molecule.info.molarmass}<br />
         Classification: {molecule.info.classification} <br/>
-        Atoms: Carbon: {molecule.info.atoms.carbon}, 
-        Hydrogen: {molecule.info.atoms.hydrogen}
+        {/* Atoms: Carbon: {molecule.info.atoms.carbon}, 
+        Hydrogen: {molecule.info.atoms.hydrogen} */}
       </p>
 
       

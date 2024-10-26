@@ -6,7 +6,6 @@
   flex-direction: column;
 
   @include desktop {
-    justify-content: space-between;
     align-items: start;
     flex-direction: row;
   }
