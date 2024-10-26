@@ -12,14 +12,15 @@ export default function Sidebar({ molecules, onMoleculeClick }) {
     <div className='sidebar'>
       <p className='sidebar__title'>3D MOLECULES</p>
 
-      {molecules.map((molecule) => (
-        <SidebarMolecule 
-          key={molecule.iupacId}
-          molecule={molecule}
-          onClick={onMoleculeClick}
-        />
-      ))}
-      
+      <div className='sidebar__list'> 
+        {molecules.map((molecule) => (
+          <SidebarMolecule 
+            key={molecule.iupacId}
+            molecule={molecule}
+            onClick={onMoleculeClick}
+          />
+        ))}
+      </div>
     </div>
   );
 }
