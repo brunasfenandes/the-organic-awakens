@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import './Sidebar.scss';
 import SidebarMolecule from '../SidebarMolecule/SidebarMolecule';
 
-export default function Sidebar() {
+export default function Sidebar({ molecules, onMoleculeClick }) {
   const handleScrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -11,32 +11,14 @@ export default function Sidebar() {
   return (
     <div className='sidebar'>
       <p className='sidebar__title'>3D MOLECULES</p>
-      
-      {/* {videos.map((video) => {
-        return (
-          <NavLink 
-            key={video.id}
-            to={`/videos/${video.id}`}
-            onClick={handleScrollToTop}
-          >
-            <SidebarVideo 
-              key={video.id}
-              title={video.title}
-              channel={video.channel}
-              image={video.image}
-            />
-          </NavLink>
-        )
-      })} */}
 
-      <SidebarMolecule />
-      <SidebarMolecule />
-      <SidebarMolecule />
-      <SidebarMolecule />
-      <SidebarMolecule />
-      <SidebarMolecule />
-      <SidebarMolecule />
-      <SidebarMolecule />
+      {molecules.map((molecule) => (
+        <SidebarMolecule 
+          key={molecule.iupacId}
+          molecule={molecule}
+          onClick={onMoleculeClick}
+        />
+      ))}
       
     </div>
   );

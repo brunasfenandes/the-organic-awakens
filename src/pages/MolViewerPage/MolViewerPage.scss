@@ -6,28 +6,25 @@
   flex-direction: column;
 
   @include desktop {
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
   &__placeholder {
-    // background-color: $Menu-Color;
-    // height: 18.75rem;
-    margin: 1.5rem 1rem;
+    margin: 1.5rem 1rem 0;
     border-radius: .625rem;
     color: $White;
-    // padding: 1rem;
     align-content: end;
     font-size: .625rem;
 
     @include tablet {
-      margin: 2.25rem;
+      margin: 2.25rem 2.25rem 0;
     }
 
     @include desktop {
-      width: 1020px;
-      margin: 2.5rem;
+      width: 70%;
+      margin: 2.5rem 1.5rem;
       height: 25rem;
     }
   }
@@ -35,6 +32,7 @@
   &__display {
     width: 100%;
     border-radius: .625rem;
+    height: 18rem;
 
     @include tablet {
       height: 25rem;
@@ -42,8 +40,39 @@
 
     @include desktop {
       width: 700px;
-      // margin: 2.5rem;
       height: 25rem;
     }
+  }
+
+  &__initial-state {
+    width: 100%;
+    border-radius: .625rem;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-size: 15px;
+    padding: 1rem;
+
+    @include tablet {
+      height: 25rem;
+      font-size: 20px;
+    }
+
+    @include desktop {
+      width: 700px;
+
+      height: 25rem;
+      font-size: 20px;
+    }
+  }
+
+  &__instructions {
+    background-color: $AAACEx;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    letter-spacing: 1px;
   }
 }

@@ -1,0 +1,17 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+
+.mol-info {
+  padding: 1rem;
+  color: $Dark;
+
+  &__formula,
+  &__info {
+    font-size: 1rem;
+
+    @include desktop {
+      font-size: 1.125rem;
+    }
+  }
+}

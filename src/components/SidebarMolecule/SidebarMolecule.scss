@@ -2,10 +2,21 @@
 @use '../../styles/partials/mixins' as *;
 
 .sidebar {
+  padding: 1rem;
+  
+
+  @include tablet {
+    padding: 2.25rem;
+  }
+
+  @include desktop {
+    padding: 2.25rem 0;
+  }
   
   &__molecule{
     display: flex;
     padding-bottom: 1rem;
+    // cursor: pointer;
 
     @include desktop {
       padding-bottom: 1.5rem;
@@ -15,9 +26,26 @@
   &__image {
     background-color: $grey-ish;
     border-radius: .25rem;
-    height: 60px;
+    height: 100px;
     width: 100px;
     margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $White;
+      transform: translateY(-5px) translateX(5px);
+      box-shadow: 0px 4px 10px rgba(2, 43, 58, 0.3);
+      color: $AAACEx;
+      // border-radius: 20px;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__prev {
+    height: 100px;
+    cursor: pointer;
   }
   
   &__info {
@@ -31,5 +59,6 @@
     font-size: .8125rem;
     font-weight: 600;
     color: $Dark;
+    cursor: pointer;
   }
 }
