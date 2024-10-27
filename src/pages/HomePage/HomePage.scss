@@ -1,3 +1,17 @@
 .home {
   height: 900px;
+  position: relative;
+
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__header {
+    margin: 1.5rem;
+
+    &--title {
+      font-size: 30px;
+    }
+  }
 }
