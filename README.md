@@ -54,6 +54,73 @@ Many students find organic chemistry concepts challenging, leading to a lack of 
 
 - No external APIs will be used for the initial version, but local data will be stored in a JSON file.
 
+## Installation and Setup
+
+### Prerequisites
+
+- Node.js (version 14+ recommended)
+- Git (for cloning the repository)
+
+### Installation
+
+- Clone the Repository:
+
+**Client**
+
+```
+  git clone https://github.com/brunasfenandes/the-organic-awakens.git
+  cd the-organic-awakens
+```
+
+**Server**
+
+```
+  git clone https://github.com/brunasfenandes/the-organic-awakens-server.git
+  cd the-organic-awakens
+```
+
+### Configure Environment Variables
+
+- Create a .env file in the server and client directories with these variables:
+
+**Client/.env**
+
+```
+  VITE_PORT=8080
+  VITE_BACKEND_URL=http://localhost
+```
+
+**Client/.env**
+
+```
+  PORT=8080
+  BACKEND_URL=http://localhost
+```
+
+## Running the Application
+
+- Backend: In the server directory:
+
+```
+npm run dev
+```
+
+- Frontend: In the client directory:
+
+```
+npm run dev
+```
+
+## Usage
+
+- Access the application: Open the localhost in your browser.
+
+- Navigate through the game modes: Quiz Mode, Flashcard Mode, and Molecule Visualizer.
+
+## Data
+
+- Quiz and Flashcard Data: Stored in JSON files, each representing groups of questions and flashcards for different topics.
+
 ### Sitemap
 
 - Home Page: Introduction and navigation to game modes.
