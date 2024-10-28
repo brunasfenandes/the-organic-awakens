@@ -24,9 +24,9 @@ function RotatingModel() {
   );
 }
 
-export default function BGMol() {
+export default function BGMol({ position = 'absolute' }) {
   return (
-    <div className='canvas'>
+    <div className='canvas' style={{ position }}>
       <Canvas camera={{ position: [0, 0, 3], fov: 50 }}>
         <ambientLight intensity={1} />
 

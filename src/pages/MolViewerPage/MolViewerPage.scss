@@ -5,9 +5,34 @@
   display: flex;
   flex-direction: column;
 
-  @include desktop {
-    align-items: start;
-    flex-direction: row;
+  &__bot {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      align-items: start;
+      flex-direction: row;
+    }
+  }
+
+  &__header {
+    padding: 1rem;
+    display: flex;
+    color: $Dark;
+
+    @include tablet {
+      padding: 1.5rem 2.25rem;
+      font-size: 2.25rem;
+    }
+
+    @include desktop {
+      padding: 1.5rem 2.25rem;
+      font-size: 2.25rem;
+    }
+
+    &--title {
+      padding-left: 1rem;
+    }
   }
 
   &__placeholder {

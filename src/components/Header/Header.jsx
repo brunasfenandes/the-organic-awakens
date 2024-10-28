@@ -68,7 +68,7 @@ export default function Header() {
                 Quiz
               </Link>
               <Link to="/3dmol" className='menu__list--item'>
-                3D Mol Visualizer
+                3D Mol Explorer
               </Link>
             </ul>
           </div>

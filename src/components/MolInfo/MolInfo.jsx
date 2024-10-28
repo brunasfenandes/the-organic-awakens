@@ -2,7 +2,7 @@ import './MolInfo.scss';
 
 export default function MolInfo({ molecule }) {
   if (!molecule) {
-    return <p>Select a molecule to see its details here.</p>;
+    return <p className='info'>Select a molecule to see its details here.</p>;
   }
 
   return (

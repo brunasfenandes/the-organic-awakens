@@ -33,15 +33,21 @@ export default function Footer() {
             <div className="footer__management">
               <p className="footer__management-title">Developed by:</p>
               <p className="footer__agency-address">Bruna Silva Fernandes</p>
-              {/* <a href='https://github.com/brunasfenandes/' className="footer__management-address" target="_blank">github.com/brunasfenandes</a> */}
               <a href="mailto:bruna.fenandes@outlook.com" target="_blank">bruna.fenandes@outlook.com</a>
             </div>
     
             <div className="footer__management">
-              <p className="footer__management-title">React-Molviewer by:</p>
-              <p className="footer__agency-address">Bruna Silva Fernandes</p>
-              {/* <a href='https://github.com/brunasfenandes/' className="footer__management-address" target="_blank">github.com/brunasfenandes</a> */}
-              <a href="mailto:bruna.fenandes@outlook.com" target="_blank">bruna.fenandes@outlook.com</a>
+              <a className="footer__management-title" href='https://www.npmjs.com/package/react-molviewer' target="_blank">React-Molviewer</a>
+
+              <div className='footer__one'>
+                <p className="footer__one--name">Paggy Huang</p>
+                <a href="mailto:paggy.huang@gmail.com" target="_blank">paggy.huang@gmail.com</a>
+              </div>
+
+              <div className='footer__one'>
+                <p className="footer__one--name">Claire Lin</p>
+                <a href="mailto:lclaire@gmail.com" target="_blank">lclaire@gmail.com</a>
+              </div>
             </div>
           </div>
           
@@ -50,7 +56,7 @@ export default function Footer() {
           </div>
       
           <div className="footer__copyright">
-            Copyright The Organic Awakens © 2024 All Rights Reserved
+            The Organic Awakens © 2024 - Inspiring Organic Chemistry Learning
           </div>
         </div>
       </footer>

@@ -8,14 +8,17 @@
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   margin: 5rem 1rem;
   padding: 1.5rem;
-  background-color: rgba(225, 229, 242, 0.5);
+  background-color: rgba(31, 122, 140, 0.5);
   border-radius: 1.25rem;
-  height: 300px;
+  height: 18.75rem;
+  font-size: 1.875rem;
+  text-align: center;
+  color: $Dark;
 
   @include tablet {
     margin: 5rem;

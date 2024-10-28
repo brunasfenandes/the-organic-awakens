@@ -19,7 +19,7 @@ export default function FlashcardPage() {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate("/flashcards");
   };
 
   const responsive = {
@@ -87,10 +87,12 @@ export default function FlashcardPage() {
               <div className="main__content">
                 <h2>{selectedFlashcard.topic}</h2>
                 <p>{selectedFlashcard.content}</p>
-                <img
-                  src={selectedFlashcard.image}
-                  alt="Flashcard Image"
-                />
+                {selectedFlashcard.image ? (
+                  <img
+                    src={selectedFlashcard.image}
+                    alt="Flashcard Image"
+                  />
+                ) : null}
               </div>
             ) : (
               <p>Select a flashcard to see its content.</p>

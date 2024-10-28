@@ -14,7 +14,7 @@ export default function FlashcardsListPage() {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate("/");
   };
 
   const getFlashcards = async () => {

@@ -1,0 +1,36 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.home {
+
+  &__highlights {
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+
+    &--list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding: 0 1rem;
+      justify-content: space-between;
+
+      @include tablet {
+        flex-direction: row;
+      }
+       
+      @include desktop {
+        flex-direction: row;
+      }
+    }
+
+    &--item {
+      margin: 1.5rem 1rem;
+      font-size: 1.25rem;
+
+      
+      @include desktop {
+        width: 18rem;
+      }
+    }
+  }
+}

@@ -99,7 +99,7 @@ export default function QuizPage() {
 
   return (
     <>
-      <BGMol/>
+      {/* <BGMol/> */}
 
       <div className='main'>
         <div className="main__header">

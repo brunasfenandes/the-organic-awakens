@@ -16,7 +16,7 @@ export default function QuizListPage() {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate("/");
   };
 
   const getQuizzes = async () => {
