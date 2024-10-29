@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Menu from '../Menu/Menu';
 import './Header.scss';
 import { NavLink, Link } from 'react-router-dom';
+import menu from '../../assets/icons/menu.svg'
 
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
@@ -51,7 +52,7 @@ export default function Header() {
             > 
               <img 
                 className="icon icon--menu"
-                src="/src/assets/icons/menu.svg"
+                src={menu}
               />
             </button>
           </div>
