@@ -19,13 +19,13 @@ export default function Header() {
     }
   };
 
-  // Check on mount and resize
+
   useEffect(() => {
-    handleResize(); // Check on initial render
-    window.addEventListener('resize', handleResize); // Listen for window resize
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
 
     return () => {
-      window.removeEventListener('resize', handleResize); // Cleanup on unmount
+      window.removeEventListener('resize', handleResize); 
     };
   }, []);
 
