@@ -43,7 +43,7 @@ export default function FlashcardPage() {
 
   const getFlashcards = async () => {
     try {
-      const { data } = await axios.get(`${backendURL}:${port}/flashcards/${id}`);
+      const { data } = await axios.get(`${backendURL}/flashcards/${id}`);
       setFlashcards(data);
       console.log(data.image)
   
