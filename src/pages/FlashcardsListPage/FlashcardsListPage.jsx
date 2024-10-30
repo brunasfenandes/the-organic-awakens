@@ -19,7 +19,7 @@ export default function FlashcardsListPage() {
 
   const getFlashcards = async () => {
     try {
-      const { data } = await axios.get(`${backendURL}/flashcards`);
+      const { data } = await axios.get(`${backendURL}:${port}/flashcards`);
       setFlashcardTopics(data);
     } catch (error) {
       console.error('Error getting flashcards:', error);
