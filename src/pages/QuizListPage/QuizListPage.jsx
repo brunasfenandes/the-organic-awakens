@@ -21,7 +21,7 @@ export default function QuizListPage() {
 
   const getQuizzes = async () => {
     try {
-      const { data } = await axios.get(`${backendURL}/quiz`);
+      const { data } = await axios.get(`${backendURL}:${port}/quiz`);
       setQuizzes(data);
     } catch (error) {
       setError('Failed to get quizzes');

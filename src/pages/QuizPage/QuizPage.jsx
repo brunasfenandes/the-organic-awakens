@@ -34,7 +34,7 @@ export default function QuizPage() {
 
   const getQuestions = async () => {
     try {
-      const { data } = await axios.get(`${backendURL}/quiz/${id}`);
+      const { data } = await axios.get(`${backendURL}:${port}/quiz/${id}`);
       setQuestions(data.questions); 
     } catch (error) {
       console.error('Error getting questions:', error);

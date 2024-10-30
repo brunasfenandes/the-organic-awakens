@@ -24,7 +24,7 @@ export default function MolViewerPage() {
 
   const getMolecules = async () => {
     try {
-      const { data } = await axios.get(`${backendURL}/3dmol`);
+      const { data } = await axios.get(`${backendURL}:${port}/3dmol`);
       setMolecules(data); 
       console.log(data);
     } catch (error) {
