@@ -1,5 +1,5 @@
 import React from 'react';
-import close from '/src/assets/Icons/close-24px.svg'
+import close from '../../assets/Icons/close-24px.svg'
 import './ResultModal.scss';
 
 export default function ResultModal({ isOpen, correctCount, totalQuestions, onRetry, onGoBack, onClose }) {
