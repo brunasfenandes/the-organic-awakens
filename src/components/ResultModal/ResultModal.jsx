@@ -1,4 +1,5 @@
 import React from 'react';
+import close from '/src/assets/Icons/close-24px.svg'
 import './ResultModal.scss';
 
 export default function ResultModal({ isOpen, correctCount, totalQuestions, onRetry, onGoBack, onClose }) {
@@ -23,7 +24,7 @@ export default function ResultModal({ isOpen, correctCount, totalQuestions, onRe
           >
             <img 
               className='modal__header--close'
-              src='/src/assets/Icons/close-24px.svg'
+              src={close}
               alt='Close Icon'
             />
           </button>
