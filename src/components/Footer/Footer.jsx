@@ -20,10 +20,10 @@ export default function Footer() {
               <a href="https://www.instagram.com/brunafenandes" target="_blank">
                 <img src={instagram} alt="Instagram Icon" className="footer__icon"/>
               </a>
-              {/* <a href="https://www.facebook.com/" target="_blank">
+              <a href="https://www.facebook.com/" target="_blank">
                 <img src={facebook} alt="Facebook Icon" className="footer__icon"/>
-              </a>  */}
-              <a href="https://x.com/brunasfenandes" target="_blank">
+              </a> 
+              <a href="https://x.com/brunasfenandess" target="_blank">
                 <img src={twitter} alt="Twitter Icon" className="footer__icon" />
               </a>
             </div>
