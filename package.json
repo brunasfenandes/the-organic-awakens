@@ -11,6 +11,9 @@
     "copy-jsmol": "copyfiles -u 1 node_modules/react-molviewer/dist/* public/jsmol"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.1",
     "@react-three/drei": "^9.114.6",
     "@react-three/fiber": "^8.17.10",
     "axios": "^1.7.7",
